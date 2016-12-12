@@ -20,6 +20,8 @@ public class UserAction {
     private String username;
     private String password;
     private String git1;
+    private String git3;
+
     @Resource
 	private UserService userservice;
 	private User user;
