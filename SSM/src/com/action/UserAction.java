@@ -17,7 +17,7 @@ import com.service.UserService;
 public class UserAction {
 
     private String id;
-    private String username ;
+    private String username   ;
     private String password;
     @Resource
 	private UserService userservice;
