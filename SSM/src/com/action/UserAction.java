@@ -23,6 +23,8 @@ public class UserAction {
     private String git3;
     private String git4;
     private String git6 ;
+    private String git2;
+    private String git5 ;
 
     @Resource
 	private UserService userservice;
