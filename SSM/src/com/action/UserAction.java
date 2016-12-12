@@ -16,7 +16,7 @@ import com.service.UserService;
 @Scope("prototype")
 public class UserAction {
 
-    private String id; 
+    private String id;  
     private String username;
     private String password;
     @Resource
