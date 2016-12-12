@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<!--   
+    namespace：必须与对应的接口全类名一致  
+    id:必须与对应接口的某个对应的方法名一致  
+      
+ -->  
+<mapper namespace="com.mapper.UserMapper">  
+	  
+	 <select id="Login"  resultType="com.pojo.User" parameterType="com.pojo.User">
+		 select * from USER where USERNAME=#{username} and PASSWORD=#{password}
+	 </select>
+	
+	 <insert id="isInsert" parameterType="com.pojo.User">
+		insert into USER(USERNAME,PASSWORD)values(#{username},#{password})
+	 </insert>
+	
+	<delete id="isDelete" parameterType="int">
+        delete from USER where ID = #{id}
+    </delete>	
+	
+	<update id="update" parameterType="com.pojo.User">
+        update USER set USERNAME=#{username},PASSWORD=#{password} where ID = #{id}
+    </update>
+	
+	<select id="queryById" parameterType="int" resultType="com.pojo.User">
+        select * from USER where ID = #{id}
+    </select> 
+    
+     <select id="queryAll" parameterType="com.pojo.User" resultType="com.pojo.User">
+        select * from USER
+    </select>
+    
+    <insert id="insertRole" parameterType="com.pojo.User">
+		insert into Role(id,role_name)values("S","SSS")
+	 </insert>
+    
+</mapper>  

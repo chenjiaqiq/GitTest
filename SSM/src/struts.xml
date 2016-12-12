@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="default" extends="struts-default" namespace="/User">
+    	
+    	<action name="index" class="com.action.UserAction" method="index">
+			<result name="success">login.jsp</result>
+		</action>
+    
+		<action name="login" class="com.action.UserAction" method="Login">
+			<result name="success">success.jsp</result>
+			<result name="error1">error1.jsp</result>
+			<result name="error2">error2.jsp</result>
+		</action>
+		<action name="insert" class="com.action.UserAction" method="Insert">
+			<result name="success">success.jsp</result>
+			<result name="failure">failure.jsp</result>
+		</action>
+		<action name="delete" class="com.action.UserAction" method="Delete">
+			<result name="success" type="redirect">queryall.action</result>
+			<result name="failure">failure.jsp</result>
+		</action>
+		<action name="update" class="com.action.UserAction" method="update">
+			<result name="success" type="redirect">queryall.action</result>
+			<result name="failure">failure.jsp</result>
+		</action>
+		<action name="query" class="com.action.UserAction" method="queryById">
+			<result name="query">update.jsp</result>
+		</action>
+		<action name="queryall" class="com.action.UserAction" method="queryAll">
+			<result name="success">showall.jsp</result>
+			<result name="failure">failure.jsp</result>
+		</action>
+	</package>
+</struts>
