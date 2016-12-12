@@ -20,7 +20,7 @@ public class UserAction {
     private String username;
     private String password;
     private String git2;
-    private String git5;
+    private String git5 ;
 
     @Resource
 	private UserService userservice;
