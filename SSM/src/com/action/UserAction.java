@@ -22,7 +22,7 @@ public class UserAction {
     private String git1;
     private String git3;
     private String git4;
-    private String git6;
+    private String git6 ;
 
     @Resource
 	private UserService userservice;
