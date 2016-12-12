@@ -21,6 +21,7 @@ public class UserAction {
     private String password;
     private String git1;
     private String git3;
+    private String git4;
 
     @Resource
 	private UserService userservice;
